@@ -4,5 +4,6 @@ This MATLAB function plots the discretized PDF represented by $X$ and $P$, where
 $$
 \begin{gather}
     X \in \mathbb{R}^{n\times d} \\
-    P \in \mathbb{R}^{n\times 1} \\
+    P \in \mathbb{R}^{n\times 1} 
+\end{gather}
 $$
