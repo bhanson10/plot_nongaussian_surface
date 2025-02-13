@@ -7,3 +7,5 @@ $$
     P \in \mathbb{R}^{n\times 1} 
 \end{gather}
 $$
+
+Please direct any questions to blhanson@ucsd.edu.
