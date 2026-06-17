@@ -1,0 +1,11 @@
+figure; hold on; 
+d = 2; mu0 = zeros(d, 1); S0 = eye(d); 
+[x, y] = meshgrid(linspace(-8,10,1000)); XY = [x(:), y(:)]; 
+t = 0.2; denom_x = 1 + t*x; denom_y = 1 + t*y;
+x0 = x ./ denom_x; y0 = y ./ denom_y; J = 1 ./ (denom_x.^2 .* denom_y.^2);
+Sinv = inv(S0); norm_const = 1 / (2*pi*sqrt(det(S0)));
+dx = x0 - mu0(1); dy = y0 - mu0(2);
+exponent = -0.5 * (Sinv(1,1)*dx.^2 + 2*Sinv(1,2)*dx.*dy + Sinv(2,2)*dy.^2 );
+P = norm_const .* exp(exponent); P = P .* J;
+p.color = 'r'; p.fill = 1; 
+plot_nongaussian_surface(XY, 'P', P(:), 'p', p); 
