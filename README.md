@@ -9,3 +9,5 @@ $$
 $$
 
 Please direct any questions to blhanson@ucsd.edu.
+
+![plot_nongaussian_surface](plot_nongaussian_surface.png)
